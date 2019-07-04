@@ -1,0 +1,15 @@
+src.includes = src/
+src.excludes = src/i18n/pt_PT.aj,\
+			   src/i18n/Messages_pt_PT.properties,\
+			   src/environmentMonitorFeature/,\
+			   src/movementDetectorFeature/,\
+			   src/wearableDeviceFeature/activity/,\
+			   src/airQualityFeature/,\
+			   src/output/aspects/,\
+			   src/output/speech/,\
+			   src/output/lights/,\
+			   src/main/aspects/airQualityMain.aj,\
+			   src/main/aspects/environmentMain.aj,\
+			   src/main/aspects/movementMain.aj,\
+			   src/main/aspects/wearableActivity.aj
+			   

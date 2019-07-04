@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.java.controllers.ProductPageController">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="640.0">
+        <menus>
+          <Menu fx:id="closeWindowMenu" mnemonicParsing="false" text="Close Window">
+            <items>
+              <MenuItem fx:id="closeButton" mnemonicParsing="false" onAction="#closeStage" text="Close Window" />
+            </items>
+          </Menu>
+            <Menu fx:id="goBackMenu" mnemonicParsing="false" text="Go Back" visible="false">
+              <items>
+                <MenuItem fx:id="goBackButton" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="alerts" editable="false" layoutY="32.0" prefHeight="341.0" prefWidth="640.0" />
+      <Button fx:id="addAlertButton" layoutX="220.0" layoutY="387.0" mnemonicParsing="false" onAction="#addAlert" prefHeight="31.0" prefWidth="188.0" />
+      <Button fx:id="removeAlertButton" layoutX="220.0" layoutY="435.0" mnemonicParsing="false" onAction="#removeAlert" prefHeight="31.0" prefWidth="188.0" />
+      <AnchorPane fx:id="alertAnchorPane" layoutY="32.0" prefHeight="448.0" prefWidth="640.0" style="-fx-background-color: #CCCCCC;" visible="false">
+         <children>
+            <Button fx:id="addAlertButtonFinal" layoutX="220.0" layoutY="395.0" mnemonicParsing="false" onAction="#addAlertFinal" prefHeight="31.0" prefWidth="188.0" />
+            <Label fx:id="alertMessage" layoutX="30.0" layoutY="36.0" prefHeight="21.0" prefWidth="133.0" text="Alert Message:" textAlignment="RIGHT" />
+            <TextField fx:id="alertMessageField" layoutX="166.0" layoutY="31.0" prefHeight="31.0" prefWidth="452.0" />
+            <TextField fx:id="beginDateField" layoutX="166.0" layoutY="88.0" prefHeight="31.0" prefWidth="452.0" />
+            <Label fx:id="beginDate" layoutX="30.0" layoutY="93.0" prefHeight="21.0" prefWidth="133.0" text="Begin Date:" />
+            <Label fx:id="endDate" layoutX="30.0" layoutY="205.0" prefHeight="21.0" prefWidth="133.0" text="End Date:" textAlignment="RIGHT" />
+            <TextField fx:id="endDateField" layoutX="166.0" layoutY="200.0" prefHeight="31.0" prefWidth="452.0" />
+            <TextField fx:id="beginHoursField" layoutX="166.0" layoutY="143.0" prefHeight="31.0" prefWidth="452.0" />
+            <Label fx:id="beginHours" layoutX="30.0" layoutY="148.0" prefHeight="21.0" prefWidth="133.0" text="Begin Hours:" textAlignment="RIGHT" />
+            <Label fx:id="interval" layoutX="30.0" layoutY="318.0" prefHeight="21.0" prefWidth="133.0" text="Interval:" textAlignment="RIGHT" />
+            <TextField fx:id="intervalField" layoutX="166.0" layoutY="313.0" prefHeight="31.0" prefWidth="452.0" />
+            <TextField fx:id="endHoursField" layoutX="166.0" layoutY="256.0" prefHeight="31.0" prefWidth="452.0" />
+            <Label fx:id="endHours" layoutX="30.0" layoutY="261.0" prefHeight="21.0" prefWidth="133.0" text="End Hours:" textAlignment="RIGHT" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="removeAnchorPane" layoutY="32.0" prefHeight="448.0" prefWidth="640.0" style="-fx-background-color: #CCCCCC;" visible="false">
+         <children>
+            <Button fx:id="removeAlertButtonFinal" layoutX="220.0" layoutY="395.0" mnemonicParsing="false" onAction="#removeAlertFinal" prefHeight="31.0" prefWidth="188.0" />
+            <ListView fx:id="alertsListView" layoutX="14.0" layoutY="29.0" prefHeight="267.0" prefWidth="612.0" />
+            <TextField fx:id="idField" layoutX="257.0" layoutY="328.0" prefHeight="31.0" prefWidth="133.0" />
+            <Label fx:id="alertMessage1" layoutX="230.0" layoutY="333.0" prefHeight="21.0" prefWidth="33.0" text="ID:" textAlignment="RIGHT" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
